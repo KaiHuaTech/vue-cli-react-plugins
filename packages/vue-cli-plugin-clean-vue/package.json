@@ -1,7 +1,7 @@
 {
   "private": false,
   "name": "vue-cli-plugin-kaihua-clean-vue",
-  "version": "0.0.20",
+  "version": "0.0.21",
   "main": "index.js",
   "files": [
     "generator/**/*",
