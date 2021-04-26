@@ -43,7 +43,7 @@ module.exports = (...args) => {
       "es3ify-loader": "^0.2.0",
       "uglifyjs-webpack-plugin": "^2.2.0",
     }
-
+    
     if (useAntd) {
       dependencies.antd = "^1.x.x"
     }
@@ -54,6 +54,13 @@ module.exports = (...args) => {
     }
     if (useAntd) {
       dependencies.antd = ">4"
+    }
+  }
+  
+  if (useAntd) {
+    devDependencies = {
+      ...devDependencies,
+      "babel-plugin-import": "^1.13.3",
     }
   }
 
