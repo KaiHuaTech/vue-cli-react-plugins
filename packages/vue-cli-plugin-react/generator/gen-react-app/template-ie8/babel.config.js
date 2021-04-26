@@ -8,7 +8,7 @@ module.exports = (api) => {
           useBuiltIns: false,
           useBuiltIns: 'entry',
           corejs: '3',
-          <%_ if (rootOptions.useIE8 { _%>
+          <%_ if (rootOptions.useIE8) { _%>
             "modules": "commonjs",
           <%_ } else { _%>
             "modules": false,
@@ -20,7 +20,7 @@ module.exports = (api) => {
       "@babel/preset-react"
     ],
     plugins: [
-      <%_ if (rootOptions.useAntd { _%>
+      <%_ if (rootOptions.useAntd) { _%>
       [
         'import',
         {
