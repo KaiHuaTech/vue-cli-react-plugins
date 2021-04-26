@@ -2,7 +2,7 @@ module.exports = async (...args) => {
   const [api, options] = args
 
   // 删除 @vue/cli-serveice 的模板
-  api.fileMiddlewares = []
+  api.generator.fileMiddlewares = []
 
   /* for (const k of ['vue-template-compiler', 'vue']) {
     if (api.generator.pkg.devDependencies[k] || api.generator.pkg.dependencies[k]) {
