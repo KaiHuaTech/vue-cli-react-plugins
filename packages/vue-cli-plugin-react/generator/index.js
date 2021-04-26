@@ -40,14 +40,16 @@ module.exports = (...args) => {
   }
 
   api.extendPackage({
+    browserslist: null,
     dependencies,
     devDependencies: {
       "@babel/core": "^7.13.15",
+      "babel-loader": "^8.1.0",
       "@babel/preset-env": "^7.13.15",
       "@babel/preset-react": "^7.13.13",
       "@babel/plugin-transform-runtime": "^7.13.15",
     }
-  })
+  }, {prune: true})
 
   /* if (options.useEslint) {
     api.genEslint(...args)
