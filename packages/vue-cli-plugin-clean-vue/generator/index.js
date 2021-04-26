@@ -1,7 +1,21 @@
-const cleanVue = require('./clean-vue')
-
 module.exports = async (...args) => {
   const [api, options] = args
-  // 删除项目文件
-  await cleanVue(api, options)
+
+  // 删除 @vue/cli-serveice 的模板
+  api.fileMiddlewares = []
+
+  /* for (const k of ['vue-template-compiler', 'vue']) {
+    if (api.generator.pkg.devDependencies[k] || api.generator.pkg.dependencies[k]) {
+      await api.generator.pm.remove(k)
+    }
+  } */
+
+  api.extendPackage({
+    dependencies: {
+      "vue": null
+    },
+    devDependencies: {
+      "vue-template-compiler": null
+    }
+  }, {prune: true})
 }
