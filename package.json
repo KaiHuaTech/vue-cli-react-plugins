@@ -4,6 +4,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "files": [
+    "generator/**/*",
+    "index.js",
+    "prompts.js"
+  ],
   "scripts": {
     "bootrap": "lerna bootstrap"
   },

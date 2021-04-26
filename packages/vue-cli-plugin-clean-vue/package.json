@@ -3,5 +3,10 @@
   "name": "vue-cli-plugin-kaihua-clean-vue",
   "version": "0.0.6",
   "main": "index.js",
+  "files": [
+    "generator/**/*",
+    "index.js",
+    "prompts.js"
+  ],
   "license": "MIT"
 }
