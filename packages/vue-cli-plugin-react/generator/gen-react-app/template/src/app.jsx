@@ -1,6 +1,6 @@
 import React from 'react'
 import './style.css'
-import Logo from './assets/logo.svg'
+import Logo from './assets/logo.jpg'
 
 function APP() {
   return <div>
