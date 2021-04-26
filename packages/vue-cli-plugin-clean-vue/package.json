@@ -1,0 +1,7 @@
+{
+  "private": false,
+  "name": "vue-cli-plugin-kaihua-clean-vue",
+  "version": "0.0.6",
+  "main": "index.js",
+  "license": "MIT"
+}
