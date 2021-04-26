@@ -22,6 +22,8 @@ module.exports = (...args) => {
       "react-dom": "^0.14.9",
       "react-loadable": "^5.5.0",
       "react-router": "^1.0.3",
+      "core-js": "^3.9.1",
+      "@babel/runtime": "^7.13.15",
     }
 
     if (useAntd) {
@@ -40,10 +42,10 @@ module.exports = (...args) => {
   api.extendPackage({
     dependencies,
     devDependencies: {
+      "@babel/core": "^7.13.15",
       "@babel/preset-env": "^7.13.15",
-      "@babel/preset-react": "^7.13.15",
+      "@babel/preset-react": "^7.13.13",
       "@babel/plugin-transform-runtime": "^7.13.15",
-      "@babel/runtime": "^7.13.15",
     }
   })
 
