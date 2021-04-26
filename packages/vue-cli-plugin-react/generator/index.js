@@ -60,7 +60,7 @@ module.exports = (...args) => {
   api.extendPackage({
     browserslist: null,
     dependencies,
-    
+    devDependencies
   }, {prune: true})
 
   /* if (options.useEslint) {
