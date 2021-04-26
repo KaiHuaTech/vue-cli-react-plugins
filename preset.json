@@ -1,5 +1,5 @@
 {
   "plugins": {
-    "vue-cli-plugin-clean-vue": {}
+    "vue-cli-plugin-kaihua-clean-vue": {}
   }
 }
