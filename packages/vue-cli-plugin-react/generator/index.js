@@ -8,11 +8,23 @@ module.exports = (...args) => {
 
   const {useIE8, useAntd} = options
 
+  const devDependencies = {
+    "@babel/core": "^7.13.15",
+    "babel-loader": "^8.1.0",
+    "@babel/preset-env": "^7.13.15",
+    "@babel/preset-react": "^7.13.13",
+    "@babel/plugin-transform-runtime": "^7.13.15",
+  }
+
   // 生成 react app file
   if (useIE8) {
-    api.render('./gen-react-app/template-ie8')
+    api.render('./gen-react-app/template-ie8', {
+      useIE8, useAntd
+    })
   } else {
-    api.render('./gen-react-app/template')
+    api.render('./gen-react-app/template', {
+      useIE8, useAntd
+    })
   }
   
   if (useIE8) {
@@ -24,6 +36,12 @@ module.exports = (...args) => {
       "react-router": "^1.0.3",
       "core-js": "^3.9.1",
       "@babel/runtime": "^7.13.15",
+    }
+
+    devDependencies = {
+      ...devDependencies,
+      "es3ify-loader": "^0.2.0",
+      "uglifyjs-webpack-plugin": "^2.2.0",
     }
 
     if (useAntd) {
@@ -42,13 +60,7 @@ module.exports = (...args) => {
   api.extendPackage({
     browserslist: null,
     dependencies,
-    devDependencies: {
-      "@babel/core": "^7.13.15",
-      "babel-loader": "^8.1.0",
-      "@babel/preset-env": "^7.13.15",
-      "@babel/preset-react": "^7.13.13",
-      "@babel/plugin-transform-runtime": "^7.13.15",
-    }
+    
   }, {prune: true})
 
   /* if (options.useEslint) {

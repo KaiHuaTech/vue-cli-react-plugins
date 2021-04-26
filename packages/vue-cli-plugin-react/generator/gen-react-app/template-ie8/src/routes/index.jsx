@@ -2,24 +2,27 @@ import React from 'react'
 import {Router, Route, IndexRedirect} from 'react-router'
 import Loadable from "react-loadable";
 
-function BecomeAsyncComponent(p) {
-  return Loadable({
-    loader: () => import(p),
-    loading() {
-      return <div>Loading...</div>
-    }
-  });
-}
+import Foo from "../views/Foo";
 
-const Foo = BecomeAsyncComponent('../views/Foo.jsx')
-const Bar = BecomeAsyncComponent('../views/Bar.jsx')
+// 异步组件
+const Bar = Loadable({
+  loader: () => import('../views/Bar.jsx'),
+  loading() {
+    return <div>Loading...</div>
+  }
+})
 
 
 const AppRouter = function () {
   return (<Router>
     <Route path="/">
-      <Route path="/foo" compoent={Foo} />
-      <Route path="/bar" compoent={Bar} />
+      <Route path="/foo" component={Foo} />
+      <Route path="/bar" component={Bar} />
     </Route>
   </Router>)
 }
+
+AppRouter.displayName = 'AppRouter'
+
+
+export default AppRouter
