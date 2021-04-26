@@ -8,7 +8,7 @@ module.exports = (...args) => {
 
   const {useIE8, useAntd} = options
 
-  const devDependencies = {
+  let devDependencies = {
     "@babel/core": "^7.13.15",
     "babel-loader": "^8.1.0",
     "@babel/preset-env": "^7.13.15",
