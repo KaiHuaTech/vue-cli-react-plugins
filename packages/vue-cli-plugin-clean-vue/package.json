@@ -6,7 +6,8 @@
   "files": [
     "generator/**/*",
     "index.js",
-    "prompts.js"
+    "prompts.js",
+    "setBabelLoader.js"
   ],
   "license": "MIT"
 }
