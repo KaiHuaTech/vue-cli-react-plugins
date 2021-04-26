@@ -38,7 +38,13 @@ module.exports = (...args) => {
   }
 
   api.extendPackage({
-    dependencies
+    dependencies,
+    devDependencies: {
+      "@babel/preset-env": "^7.13.15",
+      "@babel/preset-react": "^7.13.15",
+      "@babel/plugin-transform-runtime": "^7.13.15",
+      "@babel/runtime": "^7.13.15",
+    }
   })
 
   /* if (options.useEslint) {
