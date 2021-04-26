@@ -10,7 +10,8 @@
     "prompts.js"
   ],
   "scripts": {
-    "bootrap": "lerna bootstrap"
+    "bootrap": "lerna bootstrap",
+    "publish": "lerna publish patch"
   },
   "devDependencies": {
     "@vue/cli": "^4.5.12",
