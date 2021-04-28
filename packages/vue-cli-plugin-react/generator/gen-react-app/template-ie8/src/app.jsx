@@ -1,8 +1,9 @@
 import React from 'react'
-import './style.less'
 import Logo from './assets/logo.jpg'
 
 import AppRouter from "./routes/index";
+
+import './style.less'
 
 function APP() {
   return <div>

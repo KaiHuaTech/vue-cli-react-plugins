@@ -1,5 +1,5 @@
 import React from 'react'
-import {Router, Route, Link, IndexRedirect} from 'react-router'
+import {Router, Route, Link, IndexRedirect, hashHistory} from 'react-router'
 import Loadable from "react-loadable";
 
 import Foo from "../views/Foo";
@@ -33,7 +33,7 @@ const Layout = props => {
 }
 
 const AppRouter = function () {
-  return (<Router>
+  return (<Router history={hashHistory}>
     <Route path="/" component={Layout}>
       <Route path="/foo" component={Foo} />
       <Route path="/bar" component={Bar} />
