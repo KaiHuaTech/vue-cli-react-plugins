@@ -1,0 +1,1 @@
+node --inspect-brk /Users/soluteli/coding/servyou/servyou-kpi/cli/vue-cmd-tools/node_modules/.bin/vue create --preset /Users/soluteli/coding/servyou/servyou-kpi/cli/vue-cmd-tools/preset.json my-project

@@ -1,1 +1,4 @@
-node --inspect-brk /Users/soluteli/coding/servyou/servyou-kpi/cli/vue-cmd-tools/node_modules/.bin/vue create --preset /Users/soluteli/coding/servyou/servyou-kpi/cli/vue-cmd-tools/preset.json my-project
+## 快速开始
+```shell
+vue create -i '{"plugins":{"vue-cli-plugin-kaihua-clean-vue":{"version":"^0.0.23"},"vue-cli-plugin-kaihua-react":{"version":"^0.0.23","useIE8":true,"useAntd":true}}}' my-project
+```
