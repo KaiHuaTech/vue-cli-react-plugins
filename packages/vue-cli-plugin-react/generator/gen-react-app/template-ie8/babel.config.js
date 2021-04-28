@@ -9,8 +9,8 @@ module.exports = (api) => {
           useBuiltIns: 'entry',
           corejs: '3',
           <%_ if (useIE8) { _%>
-            "modules": "commonjs",
-            loose: true,
+          "modules": "commonjs",
+          loose: true,
           <%_ } else { _%>
             "modules": false,
           <%_ } _%>
