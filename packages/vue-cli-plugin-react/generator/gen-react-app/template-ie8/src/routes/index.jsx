@@ -1,5 +1,5 @@
 import React from 'react'
-import {Router, Route, IndexRedirect} from 'react-router'
+import {Router, Route, Link, IndexRedirect} from 'react-router'
 import Loadable from "react-loadable";
 
 import Foo from "../views/Foo";
@@ -12,12 +12,32 @@ const Bar = Loadable({
   }
 })
 
+const Layout = props => {
+  return (
+    <div className='layout'>
+      <div className='layout-sidebar'>
+        <ol>
+          <li>
+            <Link to="/foo">go to foo</Link> 
+          </li>
+          <li>
+            <Link to="/bar">go to bar</Link>
+          </li>
+        </ol>
+      </div>
+      <div className='layout-content'>
+        {props.children}
+      </div>
+    </div>
+  )
+}
 
 const AppRouter = function () {
   return (<Router>
-    <Route path="/">
+    <Route path="/" component={Layout}>
       <Route path="/foo" component={Foo} />
       <Route path="/bar" component={Bar} />
+      <IndexRedirect to="/foo" />
     </Route>
   </Router>)
 }
