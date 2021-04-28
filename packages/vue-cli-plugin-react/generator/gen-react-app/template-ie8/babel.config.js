@@ -25,7 +25,7 @@ module.exports = (api) => {
         'import',
         {
           "libraryName": "antd",
-          "style": 'css',   // or 'css'
+          "style": true,   // or 'css'
         }
       ],
       <%_ } _%>

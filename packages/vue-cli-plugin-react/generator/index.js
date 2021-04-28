@@ -15,6 +15,8 @@ module.exports = (...args) => {
     "@babel/preset-env": "^7.13.15",
     "@babel/preset-react": "^7.13.13",
     "@babel/plugin-transform-runtime": "^7.13.15",
+    "less": "^3.13.1",
+    "less-loader": "^7.3.0",
   }
 
   // 生成 react app file
