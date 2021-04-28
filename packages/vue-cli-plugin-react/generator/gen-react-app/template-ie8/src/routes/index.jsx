@@ -1,16 +1,11 @@
 import React from 'react'
 import {Router, Route, Link, IndexRedirect, hashHistory} from 'react-router'
-import Loadable from "react-loadable";
+
+import AsyncLoad from '../components/async'
 
 import Foo from "../views/Foo";
-
 // 异步组件
-const Bar = Loadable({
-  loader: () => import('../views/Bar.jsx'),
-  loading() {
-    return <div>Loading...</div>
-  }
-})
+const Bar = AsyncLoad({ loader: () => import('../views/Bar.jsx') })
 
 const Layout = props => {
   return (
@@ -43,6 +38,5 @@ const AppRouter = function () {
 }
 
 AppRouter.displayName = 'AppRouter'
-
 
 export default AppRouter
