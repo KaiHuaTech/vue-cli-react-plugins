@@ -37,7 +37,10 @@ module.exports = (api) => {
           "helpers": true,
           "regenerator": false,
         }
-      ]
+      ],
+      ["@babel/plugin-proposal-class-properties", {
+        loose: true
+      }]
     ],
   };
 };

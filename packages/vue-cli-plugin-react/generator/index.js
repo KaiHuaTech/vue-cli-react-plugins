@@ -10,6 +10,7 @@ module.exports = (...args) => {
 
   let devDependencies = {
     "@babel/core": "^7.13.15",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
     "babel-loader": "^8.1.0",
     "@babel/preset-env": "^7.13.15",
     "@babel/preset-react": "^7.13.13",
