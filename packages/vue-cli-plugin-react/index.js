@@ -34,7 +34,10 @@ module.exports = (api, options) => {
       // https://www.npmjs.com/package/css-split-webpack-plugin
       // IE9 will ignore any more than ~4000 selectors in your lovely generated CSS bundle
       config.plugin('ie8-css-split')
-        .use(require.resolve("css-split-webpack-plugin").default, [{size: 4000}])
+        .use(require.resolve("css-split-webpack-plugin"), [{size: 4000}])
+        .init((Plugin, args) => {
+          return new Plugin.default(...args)
+        });
     }
   
     jsRule
