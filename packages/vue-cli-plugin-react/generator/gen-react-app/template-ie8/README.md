@@ -21,3 +21,4 @@ npm run build
 | react-router  | [^3.2.6](https://github.com/ReactTraining/react-router/blob/v3.2.6) |  |
 | redux  | [^4.1.0](https://github.com/reduxjs/redux/blob/v4.1.0) |  |
 | react-redux  | [^5.1.2](https://github.com/reduxjs/react-redux/blob/5.x) |  |
+| webpack4 | https://v4.webpack.js.org/ |  |
