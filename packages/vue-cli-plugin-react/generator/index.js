@@ -45,6 +45,7 @@ module.exports = (...args) => {
       ...devDependencies,
       "es3ify-loader": "^0.2.0",
       "uglifyjs-webpack-plugin": "^2.2.0",
+      "css-split-webpack-plugin": "^0.2.6",
     }
     
     if (useAntd) {

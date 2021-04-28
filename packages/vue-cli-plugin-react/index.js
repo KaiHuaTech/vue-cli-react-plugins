@@ -30,6 +30,11 @@ module.exports = (api, options) => {
     if (process.env.NODE_ENV === 'production') {
       jsRule.use('es3-loader')
         .loader(require.resolve('es3ify-loader'))
+        
+      // https://www.npmjs.com/package/css-split-webpack-plugin
+      // IE9 will ignore any more than ~4000 selectors in your lovely generated CSS bundle
+      config.plugin('ie8-css-split')
+        .use(require.resolve("css-split-webpack-plugin").default, [{size: 4000}])
     }
   
     jsRule
