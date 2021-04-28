@@ -33,7 +33,7 @@ module.exports = (...args) => {
       "react": "^0.14.9",
       "react-dom": "^0.14.9",
       "react-loadable": "^5.5.0",
-      "react-router": "^1.0.3",
+      "react-router": "^2.3.0",
       "core-js": "^3.9.1",
       "@babel/runtime": "^7.13.15",
     }
