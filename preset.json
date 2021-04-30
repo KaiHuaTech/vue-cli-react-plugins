@@ -1,10 +1,10 @@
 {
   "plugins": {
     "vue-cli-plugin-kaihua-clean-vue": {
-      "version": "^0.0.26"
+      "version": "^0.0.27"
     },
     "vue-cli-plugin-kaihua-react": {
-      "version": "^0.0.26",
+      "version": "^0.0.27",
       "useIE8": true,
       "useAntd": true
     }
