@@ -1,6 +1,6 @@
 ## 快速开始
 ```shell
-vue create -i '{"plugins":{"vue-cli-plugin-kaihua-clean-vue":{"version":"^0.0.29"},"vue-cli-plugin-kaihua-react":{"version":"^0.0.29","useIE8":true,"useAntd":true}}}' my-project
+vue create -i '{"plugins":{"vue-cli-plugin-kaihua-clean-vue":{"version":"^0.0.30"},"vue-cli-plugin-kaihua-react":{"version":"^0.0.30","useIE8":true,"useAntd":true}}}' my-project
 ```
 ## 另一种开始方式 😊
 首先保存下面的配置为 json 文件， 例如 `preset.json`
@@ -8,10 +8,10 @@ vue create -i '{"plugins":{"vue-cli-plugin-kaihua-clean-vue":{"version":"^0.0.29
 {
   "plugins":{
     "vue-cli-plugin-kaihua-clean-vue":{
-      "version":"^0.0.29"
+      "version":"^0.0.30"
     },
     "vue-cli-plugin-kaihua-react":{
-      "version":"^0.0.29",
+      "version":"^0.0.30",
       "useIE8":true,
       "useAntd":true
     }
