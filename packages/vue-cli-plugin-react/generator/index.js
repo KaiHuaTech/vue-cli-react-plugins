@@ -47,6 +47,7 @@ module.exports = (...args) => {
       "es3ify-loader": "^0.2.0",
       "uglifyjs-webpack-plugin": "^2.2.0",
       "css-split-webpack-plugin": "^0.2.6",
+      "f2elint": "^1.1.2",
     }
     
     if (useAntd) {
@@ -71,8 +72,19 @@ module.exports = (...args) => {
 
   api.extendPackage({
     browserslist: null,
+    "scripts": {
+      "start": "npm run serve",
+      "f2elint-scan": "f2elint scan",
+      "f2elint-fix": "f2elint fix"
+    },
     dependencies,
-    devDependencies
+    devDependencies,
+    "husky": {
+      "hooks": {
+        "pre-commit": "f2elint commit-file-scan",
+        "commit-msg": "f2elint commit-msg-scan"
+      }
+    }
   }, {prune: true})
 
   /* if (options.useEslint) {
