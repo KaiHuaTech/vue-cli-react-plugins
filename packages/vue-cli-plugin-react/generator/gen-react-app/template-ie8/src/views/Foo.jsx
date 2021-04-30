@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
-import { Button, Icon } from 'antd'
+import { Button, Icon } from 'antd';
 
 export default class Foo extends Component {
   render() {
@@ -12,6 +12,7 @@ export default class Foo extends Component {
         <br />
         <Icon type="search" />
       </div>
-    )
+    );
   }
 }
+
