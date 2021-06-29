@@ -6,7 +6,7 @@ module.exports = (api) => {
         '@babel/preset-env',
         {
           useBuiltIns: 'entry',
-          corejs: '3',
+          corejs: '2',
           <%_ if (useIE8) { _%>
           modules: "commonjs",
           loose: true,

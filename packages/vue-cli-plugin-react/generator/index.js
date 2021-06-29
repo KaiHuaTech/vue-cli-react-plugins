@@ -35,10 +35,10 @@ module.exports = (...args) => {
       "react": "^0.14.9",
       "react-dom": "^0.14.9",
       "react-loadable": "^5.5.0",
-      "react-redux": "^5.1.2",
       "react-router": "^3.2.6",
-      "redux": "^4.1.0",
-      "core-js": "^3.9.1",
+      "react-redux": "^4.4.8",
+      "redux": "^3.7.2",
+      "core-js": "^2.6.12",
       "@babel/runtime": "^7.13.15",
     }
 
