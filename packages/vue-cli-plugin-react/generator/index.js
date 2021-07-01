@@ -40,6 +40,7 @@ module.exports = (...args) => {
       "redux": "^3.7.2",
       "core-js": "^2.6.12",
       "@babel/runtime": "^7.13.15",
+      "axios": "^0.18.0"
     }
 
     devDependencies = {
@@ -51,7 +52,7 @@ module.exports = (...args) => {
     }
     
     if (useAntd) {
-      dependencies.antd = "^1.x.x"
+      dependencies.antd = "^1.11.6"
     }
   } else {
     dependencies = {

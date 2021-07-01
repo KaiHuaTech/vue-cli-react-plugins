@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%%= BASE_URL %%>favicon.ico">
     <title><%%= htmlWebpackPlugin.options.title %%></title>
-    <!-- <script src="./pollyfill/html5shiv.min.js"></script>
-    <script src="./pollyfill/media.match.min.js"></script>
-    <script src="./pollyfill/webpack-runtime.js"></script>
-    <script src="./pollyfill/console-polyfill.js"></script> -->
     <!--[if lt IE 9]>
-    <script src="./es5-pollyfill.js"></script>
+      <script src="./pollyfill/webpack4-runtime.js"></script>
+      <script src="./pollyfill/object-defineproperty-ie8.js"></script>
+      <script src="./pollyfill/media.match.min.js"></script>
+      <script src="./pollyfill/html5shiv.min.js"></script>
+      <script src="./jquery.min.js"></script>
+      <script src="./pollyfill/console-polyfill.js"></script>
+      <link rel="stylesheet" href="./pie.css">
     <![endif]-->
   </head>
   <body>

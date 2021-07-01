@@ -1,7 +1,17 @@
 // 配置参考 https://cli.vuejs.org/zh/config/
 module.exports = {
   publicPath: './',
-  css: {
+  configureWebpack: {
+    // devtool: 'source-map',
+    resolve: {
+      alias: {
+      }
+    },
+    externals: {
+      jquery: 'jQuery'
+    }
+  },
+css: {
     loaderOptions: {
       less: {
         lessOptions: {
