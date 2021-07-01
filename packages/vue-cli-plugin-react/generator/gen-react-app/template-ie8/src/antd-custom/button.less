@@ -1,0 +1,49 @@
+@btn-prefix-cls: ant-btn;
+
+.@{btn-prefix-cls} {
+  // color
+  color: @my-baseFC;
+  border-color: @my-lineBdColor;
+  background-color: #fff;
+  font-size: @my-contentFS;
+  line-height: @my-contentLH;
+  // size
+  padding: 5px 16px;
+  border-radius: 2px;
+
+  &:hover,
+  &:active {
+    background-color: #f4f6f9;
+  }
+
+  &-ghost {
+    color: @my-baseColor;
+    border-color: @my-baseColor;
+    &:hover,
+    &:active {
+      background-color: #eaf4ff;
+    }
+  }
+
+  &-primary {
+    color: #fff;
+    background-color: @my-baseColor;
+    border-color: @my-baseColor;
+    &:hover,
+    &:active {
+      background-color: @my-baseColorHover;
+      border-color: @my-baseColorHover;
+    }
+  }
+
+  &.disabled {
+    color: @my-weakFC;
+    background-color: #d1d3d8;
+    border-color: @my-baseColor;
+  }
+
+  &-sm {
+    font-size: @my-contentFS;
+    padding: 3px 12px;
+  }
+}

@@ -1,0 +1,117 @@
+/* ====================theme-color==================== */
+/*主色*/
+@my-baseColor: #0994dc; //主色调
+@my-baseColorHover: #0885c6; //主色调滑过
+
+/*辅色*/
+@my-assistColorY: #ff9900;
+@my-assistColorR: #e63322;
+@my-assistColorB: #1dc254;
+
+/* 中间色 - 背景 */
+@my-BgColor: #f6f6f6; //大背景|底层背景色
+
+/* 中间色 - 边框 */
+@my-lineBdColor: #c4c6cc; // 分割线的颜色
+@my-tableBdColor: #e9ebf0; // 表头
+@my-formBdColor: #dfe1e6; // 表格边框和分割线
+
+/* 文字色 */
+@my-baseFC: #333; // 正常优先级
+@my-midFC: #666; // 中优先级
+@my-weakFC: #999; // 若优先级
+@my-disableFC: #ccc; // 不可用
+
+/* 功能色 */
+@my-errorBgColor: #fcebe9; //error背景色
+@my-errorBdColor: #f7c2bd; //error边框色
+@my-errorFontColor: #e63322; //error字体颜色
+
+@my-warnBgColor: #fff5e6; //warn背景色
+@my-warnBdColor: #ffe0b3; //warn边框色
+@my-warnFontColor: #ff9900; //warn字体颜色
+
+@my-successBgColor: #e8f9ee; //success背景色
+@my-successBdColor: #bbeccc; //success边框色
+@my-successFontColor: #1dc254; //success字体颜色
+
+/* 超链接色 */
+@my-vistedLinkColor: #333;
+
+/* 字号 */
+@my-titleFS: 20px;
+@my-titleLH: 26px;
+
+@my-lv1FS: 16px;
+@my-lv1LH: 22px;
+
+@my-contentFS: 14px;
+@my-contentLH: 20px;
+
+@my-lv2FS: 12px;
+@my-lv2LH: 18px;
+
+.my-text (@fs, @lh, @color) {
+  font-size: @fs;
+  line-height: @lh;
+  color: @color;
+}
+
+// 标题文本
+.my-title-text {
+  .my-text(@my-titleFS, @my-titleLH, @my-baseFC);
+}
+
+// 一级文本
+.my-lv1-text {
+  .my-text(@my-lv1FS, @my-lv1LH, @my-baseFC);
+}
+
+// 正文
+.my-content-text {
+  .my-text(@my-contentFS, @my-contentLH, @my-baseFC);
+}
+
+// 二级文本
+.my-lv2-text {
+  .my-text(@my-lv2FS, @my-lv2LH, @my-midFC);
+}
+
+// 辅助文本
+.my-assist-text {
+  .my-text(@my-lv2FS, @my-lv2FS, @my-disableFC);
+}
+
+.my-disable-text {
+  .my-text(@my-lv2FS, @my-lv2FS, @my-disableFC);
+}
+
+// 文字类-按钮文本
+.my-btn-text {
+  font-size: @my-contentFS;
+  line-height: @my-contentLH;
+  color: @my-baseColor;
+}
+
+// 隐藏类-按钮文本
+.my-btn-hide-text {
+  font-size: @my-contentFS;
+  line-height: @my-contentLH;
+  color: @my-baseFC;
+  &:hover {
+    color: @my-baseColor;
+  }
+}
+
+// 提示文字
+.my-special-text {
+  font-size: @my-contentFS;
+  line-height: @my-contentLH;
+  color: #ff8e02;
+}
+
+.my-normal-text {
+  font-size: @my-contentFS;
+  line-height: @my-contentLH;
+  color: @my-midFC;
+}

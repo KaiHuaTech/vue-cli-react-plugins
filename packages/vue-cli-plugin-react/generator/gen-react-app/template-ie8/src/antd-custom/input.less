@@ -1,0 +1,48 @@
+@input-prefix-cls: ant-input;
+
+@input-height-base: 32px;
+@input-height-lg: 36px;
+@input-height-sm: 28px;
+@input-disabled-bg: #f7f7f7;
+
+.@{input-prefix-cls} {
+  border-radius: 3px;
+  border-color: #ccc;
+
+  font-size: @my-contentFS;
+  color: @my-baseFC;
+  &:hover {
+    border-color: @my-baseColor;
+  }
+
+  &[disabled],
+  fieldset[disabled] {
+    border-color: #dddddd;
+  }
+}
+
+.my-input-with-btn {
+  display: inline-block;
+  vertical-align: middle;
+  width: 320px;
+  .ant-input-group {
+    input {
+      border-right: 0;
+    }
+    .ant-input-group-addon {
+      border-left: 1px solid #0994dc;
+      background: none;
+      width: 60px;
+      color: #0994dc;
+      border-color: #0994dc;
+      cursor: pointer;
+    }
+  }
+  &.loading {
+    .ant-input-group-addon {
+      cursor: not-allowed;
+      border-color: #ccc;
+      color: #ccc;
+    }
+  }
+}

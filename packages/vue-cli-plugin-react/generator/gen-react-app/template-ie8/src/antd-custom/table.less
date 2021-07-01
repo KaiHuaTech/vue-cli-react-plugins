@@ -1,0 +1,40 @@
+.ant-table {
+  border: 1px solid #e9e9e9;
+}
+
+.ant-table-tbody > tr > td {
+  padding: 10px 16px;
+  height: 44px !important;
+}
+.ant-table-thead > tr > th {
+  padding: 10px 16px;
+}
+.ant-table-thead > tr > th.ant-table-selection-column,
+.ant-table-tbody > tr > td.ant-table-selection-column {
+  text-align: center;
+  width: 1px;
+  padding-right: 0;
+  border-right: none;
+}
+.ant-table-tbody > tr > td:not(:last-child) {
+  border-right: 0 !important;
+}
+.ant-table-thead > tr > th:not(:last-child) {
+  border-right: 0 !important;
+}
+
+// 表头标题不加粗
+.ant-table-thead > tr > th {
+  background: #e9ebf0;
+  font-weight: 400 !important;
+  color: #333;
+}
+
+// 偶数行背景色
+.ant-table-tbody > tr:nth-child(2n) > td {
+  background-color: #f4f6f9;
+}
+
+.ant-table-row-indent {
+  display: none;
+}

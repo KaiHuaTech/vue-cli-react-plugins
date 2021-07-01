@@ -1,16 +1,15 @@
 import React from 'react';
-import Logo from './assets/logo.jpg';
+import './global.less';
 
-import AppRouter from './routes/index';
-
-import './style.less';
+import { AppRouter } from '@/chase-react-ie8/index';
+import routesConfig from './routes';
+import store from './store';
 
 function APP() {
   return (
-    <div>
-      <img className="logo" alt="React logo" src={Logo} style={{ width: '50px' }} />
-      <AppRouter />
-    </div>
+    <store.Provider>
+      <AppRouter data={routesConfig} />
+    </store.Provider>
   );
 }
 
