@@ -2,11 +2,12 @@ import { lazy } from './chase-react-ie8';
 import DefaultLayout from './layouts/DefaultLayout';
 
 import Foo from './pages/Foo/index';
-import NotFound from './components/NotFound';
+import NotFound from './pages/NotFound/index';
 
 const Bar = lazy(() => import('./pages/Bar/index.jsx'));
-const WidgetButton = lazy(() => import('./pages/Widgets/Button.jsx'));
-const WidgetInput = lazy(() => import('./pages/Widgets/Input/index.jsx'));
+const Cat = lazy(() => import('./pages/Cat/index.jsx'));
+const WidgetButton = lazy(() => import('./pages/AntDemo/Button.jsx'));
+const WidgetInput = lazy(() => import('./pages/AntDemo/Input/index.jsx'));
 
 const routerConfig = [
   {
@@ -31,6 +32,11 @@ const routerConfig = [
         component: Bar
       },
       {
+        path: '/cat',
+        // 重定向
+        component: Cat
+      },
+      {
         path: '/',
         // 重定向
         redirect: '/foo'
@@ -39,10 +45,6 @@ const routerConfig = [
         path: '/a',
         // 重定向
         redirect: '/foo'
-      },
-      {
-        // 404 没有匹配到的路由
-        component: NotFound
       }
     ]
   },
@@ -66,6 +68,10 @@ const routerConfig = [
         component: WidgetInput
       }
     ]
+  },
+  {
+    // 404 没有匹配到的路由
+    component: NotFound
   }
 ];
 
